@@ -77,6 +77,7 @@ const (
 	kubernetesWindowsOpenSSHFunctionPS1           = "windows/windowsinstallopensshfunc.ps1"
 	kubernetesWindowsCalicoFunctionPS1            = "windows/windowscalicofunc.ps1"
 	kubernetesWindowsCSEHelperPS1                 = "windows/windowscsehelper.ps1"
+	kubernetesWindowsTLSSettingsPS1               = "windows/windowssecuretlsfunc.ps1"
 	kubernetesWindowsHypervtemplatetoml           = "windows/containerdtemplate.toml"
 )
 

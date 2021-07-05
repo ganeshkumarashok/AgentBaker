@@ -369,6 +369,7 @@ type WindowsProfile struct {
 	AlwaysPullWindowsPauseImage   *bool                      `json:"alwaysPullWindowsPauseImage,omitempty"`
 	ContainerdWindowsRuntimes     *ContainerdWindowsRuntimes `json:"containerdWindowsRuntimes,omitempty"`
 	WindowsCalicoPackageURL       string                     `json:"windowsCalicoPackageURL,omitempty"`
+	WindowsSecureTlsEnabled       *bool                      `json:"windowsSecureTlsEnabled,omitempty"`
 }
 
 // ContainerdWindowsRuntimes configures containerd runtimes that are available on the windows nodes
@@ -1206,6 +1207,14 @@ func (w *WindowsProfile) IsAlwaysPullWindowsPauseImage() bool {
 	return w.AlwaysPullWindowsPauseImage != nil && *w.AlwaysPullWindowsPauseImage
 }
 
+// IsWindowsSecureTLSEnabled returns true if secure TLS should be enabled for Windows nodes
+func (w *WindowsProfile) IsWindowsSecureTLSEnabled() bool {
+	if w.WindowsSecureTlsEnabled != nil {
+		return *w.WindowsSecureTlsEnabled
+	}
+	return DefaultWindowsSecureTlsEnabled
+}
+
 // IsKubernetes returns true if this template is for Kubernetes orchestrator
 func (o *OrchestratorProfile) IsKubernetes() bool {
 	return strings.EqualFold(o.OrchestratorType, Kubernetes)
@@ -1345,7 +1354,7 @@ func (config *NodeBootstrappingConfiguration) GetOrderedKubeletConfigStringForPo
 	if config.KubeletConfig == nil {
 		return ""
 	}
-	
+
 	keys := []string{}
 	for key := range config.KubeletConfig {
 		keys = append(keys, key)
