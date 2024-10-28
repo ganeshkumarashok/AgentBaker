@@ -92,7 +92,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "description": "auto update containerImages in components.json",
+      "description": "auto update containerImages that follow docker versioning schema in components.json ",
       "fileMatch": [
         "parts/linux/cloud-init/artifacts/components.json"
       ],
@@ -103,6 +103,21 @@
       "datasourceTemplate": "docker",
       "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n          \"latestVersion\": \"{{{newValue}}}\"{{#if depType}},\n          \"previousLatestVersion\": \"{{{currentValue}}}\"{{/if}}"
     },
+    {
+      "customType": "regex",
+      "description": "auto update containerImages in components.json",
+      "fileMatch": [
+        "parts/linux/cloud-init/artifacts/components.json"
+      ],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "\"renovateTag\":\\s*\"registry=(?<registryUrl>[^,]+), name=(?<packageName>[^\"]+)\",\\s*\"latestVersion\":\\s*\"(?<currentValue>[^\"]+)\"(?:[^}]*\"previousLatestVersion\":\\s*\"(?<depType>[^\"]+)\")?"
+      ],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker",
+      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n          \"latestVersion\": \"{{{newValue}}}\"{{#if depType}},\n          \"previousLatestVersion\": \"{{{currentValue}}}\"{{/if}}"
+}
+
     {
       "customType": "regex",
       "description": "auto update packages for OS ubuntu 18.04 in components.json",
