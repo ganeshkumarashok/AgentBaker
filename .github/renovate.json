@@ -22,12 +22,12 @@
     },
     
     {
-      "matchDatasources": ["docker", "custom.deb1804", "custom.deb2004", "custom.deb2204", "custom.deb2404"],
+      "matchDatasources": ["docker"],
       "matchUpdateTypes": [
         "minor"
       ],
       "automerge": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "matchDatasources": ["docker"],
@@ -77,14 +77,5 @@
       "versioningTemplate": "docker",
       "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n          \"latestVersion\": \"{{{newValue}}}\"{{#if depType}},\n          \"previousLatestVersion\": \"{{{currentValue}}}\"{{/if}}"
     }
-  ],
-  "customDatasources": {
-    "deb2204": {
-      "defaultRegistryUrlTemplate": "https://packages.microsoft.com/ubuntu/22.04/prod/dists/testing/main/binary-amd64/Packages",
-      "format": "plain",
-      "transformTemplates": [
-        "{\"releases\": $map(($index := releases#$i[version=\"Package: {{packageName}}\"].$i; $map($index, function($i) { $replace(releases[$i + 1].version, /^Version:\\s*/, \"v\") })), function($v) { {\"version\": $v} })}"
-      ]
-    }
-  }
+  ]
 }
