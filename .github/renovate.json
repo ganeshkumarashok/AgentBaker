@@ -19,6 +19,12 @@
     {
       "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<timestamp>\\d{14})$"
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": false,
+      "enabled": true
     },
     
     {
@@ -27,7 +33,7 @@
         "minor"
       ],
       "automerge": false,
-      "enabled": true
+      "enabled": false
     },
     {
       "matchDatasources": ["docker"],
