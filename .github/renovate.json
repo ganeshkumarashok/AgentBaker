@@ -17,22 +17,12 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<timestamp>\\d{14})$"
-    },
-    {
-      "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "enabled": true,
-      "automerge": false
-    },
-    {
       "matchDatasources": ["docker"],
       "matchUpdateTypes": [
         "minor"
       ],
       "automerge": false,
-      "enabled": false
+      "enabled": true
     },
     {
       "matchDatasources": ["docker"],
@@ -44,30 +34,6 @@
     }
   ],
   "customManagers": [
-    {
-      "customType": "regex",
-      "description": "Auto-update GPU container images in components.json",
-      "fileMatch": ["parts/linux/cloud-init/artifacts/components.json"],
-      "matchStringsStrategy": "any",
-      "matchStrings": [
-        "\"renovateTag\":\\s*\"registry=(?<registryUrl>[^,]+), name=(?<packageName>[^\"]+)\",\\s*\"latestVersion\":\\s*\"(?<currentValue>[^\"]+)\""
-      ],
-      "datasourceTemplate": "docker",
-      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n          \"latestVersion\": \"{{{newValue}}}\""
-    },
-    {
-      "customType": "regex",
-      "description": "auto update containerImages that follow docker versioning schema in components.json ",
-      "fileMatch": [
-        "parts/linux/cloud-init/artifacts/components.json"
-      ],
-      "matchStringsStrategy": "any",
-      "matchStrings": [
-        "\"renovateTag\":\\s*\"registry=(?<registryUrl>[^,]+), name=(?<packageName>[^\"]+)\",\\s*\"latestVersion\":\\s*\"(?<currentValue>[^\"]+)\"(?:[^}]*\"previousLatestVersion\":\\s*\"(?<depType>[^\"]+)\")?"
-      ],
-      "datasourceTemplate": "docker",
-      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n          \"latestVersion\": \"{{{newValue}}}\"{{#if depType}},\n          \"previousLatestVersion\": \"{{{currentValue}}}\"{{/if}}"
-    },
     {
       "customType": "regex",
       "description": "auto update containerImages in components.json",
