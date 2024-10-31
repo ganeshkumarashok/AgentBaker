@@ -21,21 +21,6 @@
       "matchUpdateTypes": ["minor", "patch"],
       "enabled": true,
       "automerge": false
-    },
-    {
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": false,
-      "enabled": true
-    },
-    {
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["minor"],
-      "excludePackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
-      "enabled": false,
-      "automerge": false
     }
   ],
   "customManagers": [
