@@ -17,6 +17,7 @@
   ],
   "packageRules": [
     {
+      "datasource": ["docker"],
       "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
       "matchUpdateTypes": ["minor", "patch"],
       "enabled": true,
