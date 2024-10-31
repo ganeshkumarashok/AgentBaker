@@ -17,13 +17,6 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["minor"],
-      "excludePackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
-      "enabled": false,
-      "automerge": false
-    },
-    {
       "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
       "matchUpdateTypes": ["minor", "patch"],
       "enabled": true,
@@ -36,7 +29,14 @@
       ],
       "automerge": false,
       "enabled": true
-    }
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["minor"],
+      "excludePackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
+      "enabled": false,
+      "automerge": false
+    },
   ],
   "customManagers": [
     {
