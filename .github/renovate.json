@@ -36,7 +36,7 @@
       "excludePackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
       "enabled": false,
       "automerge": false
-    },
+    }
   ],
   "customManagers": [
     {
