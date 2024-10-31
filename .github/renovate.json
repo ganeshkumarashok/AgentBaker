@@ -31,6 +31,18 @@
   "customManagers": [
     {
       "customType": "regex",
+      "description": "Auto-update aks-gpu-cuda and aks-gpu-grid in components.json",
+      "fileMatch": ["parts/linux/cloud-init/artifacts/components.json"],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "\"renovateTag\":\\s*\"registry=(?<registryUrl>[^,]+), name=(?<packageName>aks/aks-gpu-cuda|aks/aks-gpu-grid)\",\\s*\"latestVersion\":\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-(?<prerelease>\\d{14}))?$",
+      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n      \"latestVersion\": \"{{{newValue}}}\""
+    },
+    {
+      "customType": "regex",
       "description": "auto update containerImages in components.json",
       "fileMatch": [
         "parts/linux/cloud-init/artifacts/components.json"
