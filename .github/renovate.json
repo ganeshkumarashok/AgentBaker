@@ -16,9 +16,7 @@
     }
   ],
   "packageRules": [
-
     {
-      // Rule 1: Disable minor updates for all Docker packages except aks/aks-gpu-cuda and aks/aks-gpu-grid
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["minor"],
       "excludePackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
@@ -26,7 +24,6 @@
       "automerge": false
     },
     {
-      // Rule 2: Enable minor and patch updates for aks/aks-gpu-cuda and aks/aks-gpu-grid
       "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
       "matchUpdateTypes": ["minor", "patch"],
       "enabled": true,
