@@ -18,9 +18,12 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
+      "matchUpdateTypes": [
+        "minor"
+      ],
       "automerge": false,
-      "enabled": true
-    }
+      "enabled": false
+    },
   ],
   "customManagers": [
     {
