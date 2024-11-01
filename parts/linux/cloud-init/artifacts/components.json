@@ -102,7 +102,7 @@
       "multiArchVersionsV2": [
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=containernetworking/azure-cns",
-          "latestVersion": "v1.4.56",
+          "latestVersion": "v1.6.14",
           "containerImagePrefetch": {
             "latestVersion": {
               "binaries": [
@@ -113,8 +113,8 @@
         },
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=containernetworking/azure-cns",
-          "latestVersion": "v1.5.38",
-          "previousLatestVersion": "v1.5.35",
+          "latestVersion": "v1.6.14",
+          "previousLatestVersion": "v1.5.38",
           "containerImagePrefetch": {
             "latestVersion": {
               "binaries": [
