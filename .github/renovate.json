@@ -27,7 +27,7 @@
       ],
       "automerge": false,
       "enabled": true
-    },
+    }
   ],
   "customManagers": [
     {
