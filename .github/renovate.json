@@ -19,7 +19,6 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],
-      "matchUpdateTypes": ["major", "minor", "patch"],
       "enabled": true,
       "automerge": false
     }
