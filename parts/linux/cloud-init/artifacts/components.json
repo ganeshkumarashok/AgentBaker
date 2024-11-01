@@ -283,7 +283,7 @@
       "multiArchVersionsV2": [
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=oss/kubernetes/kube-state-metrics",
-          "latestVersion": "v2.11.0"
+          "latestVersion": "v2.13.0"
         }
       ]
     },
