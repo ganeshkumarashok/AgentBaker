@@ -39,19 +39,21 @@
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:-(?<prerelease>\\d{14}))?$",
-      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n  \"latestVersion\": \"{{{newValue}}}\""
+      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n      \"latestVersion\": \"{{{newValue}}}\""
     },
     {
       "customType": "regex",
-      "description": "Auto-update other container images in components.json",
-      "fileMatch": ["parts/linux/cloud-init/artifacts/components.json"],
+      "description": "auto update containerImages in components.json",
+      "fileMatch": [
+        "parts/linux/cloud-init/artifacts/components.json"
+      ],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "\"renovateTag\":\\s*\"registry=(?<registryUrl>[^,]+), name=(?<packageName>(?!aks/aks-gpu-cuda|aks/aks-gpu-grid)[^\"]+)\",\\s*\"latestVersion\":\\s*\"(?<currentValue>[^\"]+)\""
+        "\"renovateTag\":\\s*\"registry=(?<registryUrl>[^,]+), name=(?<packageName>[^\"]+)\",\\s*\"latestVersion\":\\s*\"(?<currentValue>[^\"]+)\"(?:[^}]*\"previousLatestVersion\":\\s*\"(?<depType>[^\"]+)\")?"
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker",
-      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n  \"latestVersion\": \"{{{newValue}}}\"{{#if depType}},\n  \"previousLatestVersion\": \"{{{currentValue}}}\"{{/if}}"
+      "autoReplaceStringTemplate": "\"renovateTag\": \"registry={{{registryUrl}}}, name={{{packageName}}}\",\n          \"latestVersion\": \"{{{newValue}}}\"{{#if depType}},\n          \"previousLatestVersion\": \"{{{currentValue}}}\"{{/if}}"
     }
   ]
 }
