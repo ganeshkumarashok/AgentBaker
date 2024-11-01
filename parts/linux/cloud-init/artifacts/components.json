@@ -465,7 +465,7 @@
         },
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=oss/open-policy-agent/gatekeeper",
-          "latestVersion": "v3.16.3"
+          "latestVersion": "v3.17.1"
         }
       ]
     },
