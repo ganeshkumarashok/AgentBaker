@@ -22,9 +22,6 @@
     },
     {
       "matchDatasources": ["docker"],
-      "matchUpdateTypes": [
-        "minor"
-      ],
       "automerge": false,
       "enabled": true
     }
