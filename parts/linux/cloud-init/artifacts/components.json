@@ -17,7 +17,7 @@
       "multiArchVersionsV2": [
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=oss/kubernetes/pause",
-          "latestVersion": "3.6"
+          "latestVersion": "3.9"
         }
       ]
     },
