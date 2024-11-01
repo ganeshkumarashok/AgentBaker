@@ -22,7 +22,7 @@
         "minor"
       ],
       "automerge": false,
-      "enabled": false
+      "enabled": true
     },
   ],
   "customManagers": [
