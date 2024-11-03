@@ -24,10 +24,6 @@
       "enabled": true,
       "ignoreUnstable": false,
       "respectLatest": false
-    },
-    {      
-      "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],      
-      "matchUpdateTypes": ["major", "minor", "patch", "prerelease"]
     }
   ],
   "customManagers": [
