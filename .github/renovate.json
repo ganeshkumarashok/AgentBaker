@@ -17,15 +17,8 @@
     }
   ],
   "packageRules": [
-    {      
-      "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],      
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<prerelease>\\d{14})$",
-      "automerge": false,      
-      "enabled": true,
-      "ignoreUnstable": false,
-      "respectLatest": false
-    },
-        {
+
+    {
       "matchDatasources": ["docker", "custom.deb1804", "custom.deb2004", "custom.deb2204", "custom.deb2404"],
       "matchUpdateTypes": [
         "minor"
@@ -96,6 +89,14 @@
     {
       "matchPackageNames": ["moby-runc", "moby-containerd"],
       "extractVersion": "^v?(?<version>.+)$"
+    },
+    {      
+      "matchPackageNames": ["aks/aks-gpu-cuda", "aks/aks-gpu-grid"],      
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<prerelease>\\d{14})$",
+      "automerge": false,      
+      "enabled": true,
+      "ignoreUnstable": false,
+      "respectLatest": false
     }
   ],
   "customManagers": [
