@@ -12,7 +12,7 @@
   "logLevelRemap": [
     {
       "matchMessage": "/^Custom manager fetcher/",
-      "newLogLevel": "info"
+      "newLogLevel": "trace"
     }
   ],
   "packageRules": [
