@@ -95,8 +95,7 @@
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<prerelease>\\d{14})$",
       "automerge": false,      
       "enabled": true,
-      "ignoreUnstable": false,
-      "respectLatest": false
+      "ignoreUnstable": false
     }
   ],
   "customManagers": [
