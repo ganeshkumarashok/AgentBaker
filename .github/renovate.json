@@ -9,6 +9,7 @@
   "branchConcurrentLimit": 50,
   "separateMinorPatch": true,
   "labels": ["renovate"],
+  "recreateWhen": "always",
   "logLevelRemap": [
     {
       "matchMessage": "/^Custom manager fetcher/",
