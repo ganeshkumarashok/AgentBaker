@@ -198,7 +198,7 @@
       "multiArchVersionsV2": [
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=containernetworking/azure-npm",
-          "latestVersion": "v1.5.34"
+          "latestVersion": "v1.5.40"
         }
       ]
     },
@@ -571,7 +571,7 @@
       "downloadURL": "mcr.microsoft.com/aks/aks-gpu-grid:*",
       "gpuVersion": { 
         "renovateTag": "registry=https://mcr.microsoft.com, name=aks/aks-gpu-grid",
-        "latestVersion": "535.161.08-20241021235607"
+        "latestVersion": "535.161.08-20241021235606"
       }
     }
   ],
