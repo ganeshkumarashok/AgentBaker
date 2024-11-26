@@ -366,8 +366,8 @@
         },
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=oss/kubernetes-csi/azuredisk-csi",
-          "latestVersion": "v1.29.10",
-          "previousLatestVersion": "v1.29.9"
+          "latestVersion": "v1.29.11",
+          "previousLatestVersion": "v1.29.10"
         },
         {
           "renovateTag": "registry=https://mcr.microsoft.com, name=oss/kubernetes-csi/azuredisk-csi",
@@ -571,7 +571,7 @@
       "downloadURL": "mcr.microsoft.com/aks/aks-gpu-grid:*",
       "gpuVersion": { 
         "renovateTag": "registry=https://mcr.microsoft.com, name=aks/aks-gpu-grid",
-        "latestVersion": "535.161.08-20241021235607"
+        "latestVersion": "535.161.08-20241021235606"
       }
     }
   ],
