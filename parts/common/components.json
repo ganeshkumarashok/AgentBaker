@@ -1031,7 +1031,7 @@
             "versionsV2": [
               {
                 "renovateTag": "name=moby-runc, os=ubuntu, release=20.04",
-                "latestVersion": "1.2.6-ubuntu20.04u1"
+                "latestVersion": "1.2.8-ubuntu20.04u24"
               }
             ]
           },
@@ -1039,7 +1039,7 @@
             "versionsV2": [
               {
                 "renovateTag": "name=moby-runc, os=ubuntu, release=22.04",
-                "latestVersion": "1.2.6-ubuntu22.04u1"
+                "latestVersion": "1.2.8-ubuntu22.04u24"
               }
             ]
           },
@@ -1047,7 +1047,7 @@
             "versionsV2": [
               {
                 "renovateTag": "name=moby-runc, os=ubuntu, release=24.04",
-                "latestVersion": "1.2.6-ubuntu24.04u1"
+                "latestVersion": "1.2.8-ubuntu24.04u24"
               }
             ]
           }
@@ -1064,7 +1064,7 @@
             "versionsV2": [
               {
                 "renovateTag": "name=moby-containerd, os=ubuntu, release=24.04",
-                "latestVersion": "2.0.4-ubuntu24.04u1"
+                "latestVersion": "2.0.12-ubuntu24.04u1"
               }
             ]
           },
@@ -1072,7 +1072,7 @@
             "versionsV2": [
               {
                 "renovateTag": "name=moby-containerd, os=ubuntu, release=22.04",
-                "latestVersion": "1.7.27-ubuntu22.04u1"
+                "latestVersion": "1.7.35-ubuntu22.04u1"
               }
             ]
           },
@@ -1080,7 +1080,7 @@
             "versionsV2": [
               {
                 "renovateTag": "name=moby-containerd, os=ubuntu, release=20.04",
-                "latestVersion": "1.7.27-ubuntu20.04u1"
+                "latestVersion": "1.7.35-ubuntu20.04u1"
               }
             ]
           }
@@ -1090,7 +1090,7 @@
             "versionsV2": [
               {
                 "renovateTag": "RPM_registry=https://packages.microsoft.com/cbl-mariner/2.0/prod/base/x86_64/repodata, name=moby-containerd, os=mariner, release=2.0",
-                "latestVersion": "1.6.26-11.cm2"
+                "latestVersion": "1.6.26-13.cm2"
               }
             ]
           }
@@ -1110,7 +1110,7 @@
             "versionsV2": [
               {
                 "renovateTag": "RPM_registry=https://packages.microsoft.com/azurelinux/3.0/prod/base/x86_64/repodata, name=containerd2, os=azurelinux, release=3.0",
-                "latestVersion": "2.0.0-12.azl3"
+                "latestVersion": "2.0.0-19.azl3"
               }
             ]
           }
